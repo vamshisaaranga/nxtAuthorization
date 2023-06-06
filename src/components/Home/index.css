@@ -1,0 +1,82 @@
+/* Write your CSS code here */
+@media (min-width: 768px) {
+  .homePageContainer {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .homeImageLg {
+    height: 300px;
+    margin: 30px;
+  }
+  .homeHeading {
+    font-family: roboto;
+    font-size: 50px;
+    color: #1e293b;
+  }
+  .homeDescription {
+    font-family: roboto;
+    color: #475569;
+    font-size: 20px;
+  }
+  .shopNowButton {
+    width: 100px;
+    height: 30px;
+    background-color: #0967d2;
+    border-width: 0px;
+    color: #ffffff;
+    border-radius: 4px;
+    font-family: roboto;
+    cursor: pointer;
+  }
+  .homeImageSm {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .homePageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .homeHeading {
+    font-family: roboto;
+    font-size: 30px;
+    color: #1e293b;
+    text-align: center;
+    order: 1;
+  }
+  .homeImageLg {
+    display: none;
+  }
+  .homeDescription {
+    font-family: roboto;
+    color: #475569;
+    font-size: 12px;
+    text-align: center;
+    order: 3;
+  }
+  .homeImageSm {
+    height: 200px;
+  }
+  .homeImageSmContainer {
+    text-align: center;
+  }
+  .homeButtonContainer {
+    text-align: center;
+  }
+  .shopNowButton {
+    width: 150px;
+    height: 30px;
+    background-color: #0967d2;
+    border-width: 0px;
+    color: #ffffff;
+    border-radius: 4px;
+    font-family: roboto;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,70 @@
+/* Write your CSS code here */
+.headerWebsiteLogo {
+  height: 30px;
+  padding: 20px;
+}
+.navElements {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .navContainerLg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navContainerSm {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .navContainerLg {
+    display: none;
+  }
+  .navAlignment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .websiteLogoSm {
+    height: 30px;
+    padding: 10px;
+    margin-right: 20px;
+  }
+  .logOutImage {
+    height: 30px;
+  }
+  .navHomeImage {
+    height: 30px;
+    margin: 10px;
+  }
+  .navigationContainer {
+    background-color: #e6f6ff;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.navItems {
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  font-family: roboto;
+}
+.logoutButton {
+  margin-right: 20px;
+  height: 26px;
+  align-self: center;
+  background-color: #0967d2;
+  border-width: 0px;
+  font-family: roboto;
+  color: #ffffff;
+  font-size: 10px;
+  width: 60px;
+  border-radius: 4px;
+  cursor: pointer;
+}

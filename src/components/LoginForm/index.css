@@ -1,0 +1,69 @@
+/* Write your CSS code here */
+@media (min-width: 768px) {
+  .websiteLogin {
+    height: 300px;
+    margin: 10px;
+  }
+  .loginPageContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .websiteLogin {
+    height: 200px;
+    margin: 10px;
+  }
+  .loginPageContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.websiteLogo {
+  height: 50px;
+}
+.userNameLabel {
+  font-family: roboto;
+  font-size: 12px;
+  font-weight: bold;
+  color: #475569;
+}
+.userNameInput {
+  margin-top: 10px;
+  height: 26px;
+  width: 200px;
+  background-color: #d7dfe9;
+  border-width: 0px;
+  margin-bottom: 20px;
+}
+.passwordLabel {
+  font-family: roboto;
+  font-size: 12px;
+  font-weight: bold;
+  color: #475569;
+}
+.passwordInput {
+  margin-top: 10px;
+  height: 26px;
+  width: 200px;
+  background-color: #d7dfe9;
+  border-width: 0px;
+  margin-bottom: 20px;
+}
+.loginButton {
+  width: 100%;
+  height: 30px;
+  background-color: #0b69ff;
+  border-width: 0px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: roboto;
+  cursor: pointer;
+}
