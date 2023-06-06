@@ -27,6 +27,7 @@ class LoginFrom extends Component {
 
     const response = await fetch(url, options)
     const data = await response.json()
+    console.log(response.ok)
   }
 
   render() {
@@ -40,7 +41,7 @@ class LoginFrom extends Component {
             className="websiteLogin"
           />
         </div>
-        <form className="loginFormContainer" onClick={this.submitForm}>
+        <form className="loginFormContainer" onSubmit={this.submitForm}>
           <div>
             <img
               src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
@@ -72,7 +73,7 @@ class LoginFrom extends Component {
             onChange={this.changePassword}
           />
           <br />
-          <button type="button" className="loginButton">
+          <button type="submit" className="loginButton">
             Login
           </button>
         </form>
