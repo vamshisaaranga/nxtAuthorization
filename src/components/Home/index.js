@@ -20,7 +20,7 @@ const Home = () => {
             />
           </div>
           <p className="homeDescription">
-            Fashion is part of daily air and it does not quiet help that it
+            Fashion is part of the daily air and it does not quiet help that it
             changes every time. Clothes have always marker of the era and we are
             in a revolution Your fashion makes you been seen and heard that way
             you are. So celebrating seasons new and exciting fashion in your own

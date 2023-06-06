@@ -67,3 +67,7 @@
   font-family: roboto;
   cursor: pointer;
 }
+.errorMsg {
+  color: #ff0b37;
+  font-family: roboto;
+}

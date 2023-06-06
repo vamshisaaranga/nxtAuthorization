@@ -14,9 +14,9 @@ const Header = () => {
           />
         </div>
         <div className="navElements">
-          <p className="navItems">Home</p>
-          <p className="navItems">Products</p>
-          <p className="navItems">Cart</p>
+          <li className="navItems">Home</li>
+          <li className="navItems">Products</li>
+          <li className="navItems">Cart</li>
           <button type="button" className="logoutButton">
             Logout
           </button>

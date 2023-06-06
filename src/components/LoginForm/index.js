@@ -4,21 +4,21 @@ import {Component} from 'react'
 import './index.css'
 
 class LoginFrom extends Component {
-  state = {userName: '', password: ''}
+  state = {username: '', password: '', notValidUser: false, errorMsg: ''}
 
   changePassword = event => {
     this.setState({password: event.target.value})
   }
 
   changeUsername = event => {
-    this.setState({userName: event.target.value})
+    this.setState({username: event.target.value})
   }
 
   submitForm = async event => {
     event.preventDefault()
-    const {userName, password} = this.state
-    const userDetails = {userName, password}
-    console.log(userDetails)
+    const {username, password} = this.state
+    const userDetails = {username, password}
+
     const url = 'https://apis.ccbp.in/login'
     const options = {
       method: 'POST',
@@ -27,11 +27,19 @@ class LoginFrom extends Component {
 
     const response = await fetch(url, options)
     const data = await response.json()
-    console.log(response.ok)
+
+    if (response.ok) {
+      const {history} = this.props
+      history.replace('/')
+      this.setState({notValidUser: false})
+      this.setState({username: '', password: ''})
+    } else {
+      this.setState({notValidUser: true, errorMsg: data.error_msg})
+    }
   }
 
   render() {
-    const {userName, password} = this.state
+    const {userName, password, notValidUser, errorMsg} = this.state
     return (
       <div className="loginPageContainer">
         <div>
@@ -59,6 +67,7 @@ class LoginFrom extends Component {
             value={userName}
             className="userNameInput"
             onChange={this.changeUsername}
+            placeholder="Username"
           />
           <br />
           <label htmlFor="passwordInput" className="passwordLabel">
@@ -71,11 +80,13 @@ class LoginFrom extends Component {
             className="passwordInput"
             value={password}
             onChange={this.changePassword}
+            placeholder="Password"
           />
           <br />
           <button type="submit" className="loginButton">
             Login
           </button>
+          {notValidUser && <p className="errorMsg">{errorMsg}</p>}
         </form>
       </div>
     )
